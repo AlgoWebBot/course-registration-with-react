@@ -11,7 +11,7 @@ const Sidebar = ({ courseName, coursePrice, creditHour, TotalCredit }) => {
                 <div className='p-4'>
                     <h1 className='text-black text-xl font-bold'>Course Name </h1>
                     {
-                        courseName.map((course, index) => <h1 className='text-base font-regular text-black my-2'>0{index + 1}. {course.courseName}</h1>)
+                        courseName.map((course, index) => <h1 className='text-lg font-regular text-[#1c1b1b99] my-2'>0{index + 1}. {course.courseName}</h1>)
                     }
 
                 </div>

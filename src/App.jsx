@@ -15,36 +15,43 @@ function App() {
 
   const handleCourseName = (course) => {
     const notUnique = courseBookmark.find(uniqueCourse => uniqueCourse.id === course.id);
+    let initialCredit = course.courseCredit;
+    // console.log(creditHour, TotalCredit);
     if (notUnique) {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: 'Item already exist in bookmark!'
       })
-    } else if (!notUnique && creditHour >= 3 && TotalCredit <= 18) {
-      setCourseBookmarks([...courseBookmark, course])
-      setCoursePrice(coursePrice + course.coursePrice);
-      setcreditHour(creditHour - course.courseCredit)
-      setTotalCredit(TotalCredit + course.courseCredit);
-    } else if (creditHour <= 3) {
-      setcreditHour(0);
-      Swal.fire({
+    } else {
+      const totalCredit = initialCredit + TotalCredit;
+      const RemainingCreditHour = creditHour - initialCredit;
+      if (totalCredit > 20) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Total credit limit exist!'
+        })
+      } else {
+        setCourseBookmarks([...courseBookmark, course])
+        setCoursePrice(coursePrice + course.coursePrice);
+        setcreditHour(creditHour - course.courseCredit)
+        setTotalCredit(TotalCredit + course.courseCredit);
+      }
+    }
+    if (RemainingCreditHour < 0) {
+      return Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Credit hour must be greather then 0!'
+        text: 'Credit hour can not negative!'
       })
-    } else if (TotalCredit >= 18) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Credit hour must be greather then 0!'
-      })
+      // return console.log('negative');
     }
   }
 
   return (
     <>
-      <div className='container mx-auto bg-red-50'>
+      <div className='container mx-auto'>
         <Header />
         <div className='lg:flex mg:justify-center'>
           <div className='md:w-3/4'>

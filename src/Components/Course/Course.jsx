@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDollarSign, faBookOpen } from '@fortawesome/free-solid-svg-icons'
 
 const Course = ({ course, handleCourseName }) => {
 
@@ -12,11 +14,17 @@ const Course = ({ course, handleCourseName }) => {
         </figure>
         <div className="space-y-2">
           <h2 className="text-xl font-bold">{ courseName }</h2>
-          <p className='text-lg font-regular'>{courseDetails? courseDetails.slice(0, 60) : "Upcoming soon!!!"}</p>
+          <p className='text-lg font-regular text-[#1c1b1b99]'>{courseDetails? courseDetails.slice(0, 60) : "Upcoming soon!!!"}</p>
           
           <div className='flex justify-between items-center'>
-            <p className='text-xl'>Price: {coursePrice ? coursePrice : "Upcoming soon!!!"}$</p>
-            <p className='text-xl'>Credit: {courseCredit ? courseCredit : "Upcoming soon!!!"}hr</p>
+            <div className='flex items-center justify-center gap-2'>
+              <FontAwesomeIcon icon={faDollarSign} />
+              <p className='text-xl text-[#1c1b1b99]'>Price: {coursePrice ? coursePrice : "Upcoming soon!!!"}$</p>
+            </div>
+            <div className='flex justify-center items-center gap-2'>
+              <FontAwesomeIcon icon={faBookOpen} />
+              <p className='text-xl text-[#1c1b1b99]'>Credit: {courseCredit ? courseCredit : "Upcoming soon!!!"}hr</p>
+            </div>
           </div>
 
           <div className="mt-2">
