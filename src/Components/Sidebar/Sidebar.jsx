@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Sidebar = ({ courseName }) => {
+const Sidebar = ({ courseName, coursePrice }) => {
     return (
         <div className='flex justify-center items-center'>
             <div className="w-80 bg-base-100 shadow-xl rounded-lg">
@@ -21,7 +21,7 @@ const Sidebar = ({ courseName }) => {
                 </div>
                 <hr />
                 <div>
-                    <h1 className='text-black text-xl font-regular p-4'>Total Price: 12500$</h1>
+                    <h1 className='text-black text-xl font-regular p-4'>Total Price: { coursePrice }$</h1>
                 </div>
             </div>
         </div>

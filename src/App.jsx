@@ -7,17 +7,18 @@ import Sidebar from './Components/Sidebar/Sidebar'
 function App() {
 
   const [courseBookmark, setCourseBookmarks] = useState([]);
+  const [coursePrice, setCoursePrice] = useState(0);
 
 
   const handleCourseName = (course) => {
-    // console.log('Select button clicked');
     const notUnique = courseBookmark.find(uniqueCourse => uniqueCourse.id === course.id);
     if (notUnique) {
       window.alert('Already exist in the book mark');
     } else {
       setCourseBookmarks([...courseBookmark, course])
+      setCoursePrice(coursePrice + course.coursePrice);
+      // console.log(coursePrice)
     }
-
   }
 
   return (
@@ -29,7 +30,10 @@ function App() {
             <Courses handleCourseName={handleCourseName} />
           </div>
           <div className='md:1/4 py-6'>
-            <Sidebar courseName={courseBookmark} />
+            <Sidebar
+              courseName={courseBookmark} 
+              coursePrice={coursePrice}
+              />
           </div>
         </div>
       </div>
