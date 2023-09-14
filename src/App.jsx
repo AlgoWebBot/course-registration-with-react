@@ -8,6 +8,8 @@ function App() {
 
   const [courseBookmark, setCourseBookmarks] = useState([]);
   const [coursePrice, setCoursePrice] = useState(0);
+  const [creditHour, setcreditHour] = useState(20);
+  const [TotalCredit, setTotalCredit] = useState(0);
 
 
   const handleCourseName = (course) => {
@@ -17,6 +19,8 @@ function App() {
     } else {
       setCourseBookmarks([...courseBookmark, course])
       setCoursePrice(coursePrice + course.coursePrice);
+      setcreditHour(creditHour - course.courseCredit)
+      setTotalCredit(TotalCredit + course.courseCredit);
       // console.log(coursePrice)
     }
   }
@@ -33,6 +37,8 @@ function App() {
             <Sidebar
               courseName={courseBookmark} 
               coursePrice={coursePrice}
+              TotalCredit={TotalCredit}
+              creditHour={creditHour}
               />
           </div>
         </div>

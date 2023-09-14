@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Sidebar = ({ courseName, coursePrice }) => {
+const Sidebar = ({ courseName, coursePrice, creditHour, TotalCredit }) => {
     return (
         <div className='flex justify-center items-center'>
             <div className="w-80 bg-base-100 shadow-xl rounded-lg">
                 <div>
-                    <h1 className='text-blue-500 text-xl font-bold p-4'>Credit Hour Remaining 20 hr</h1>
+                    <h1 className='text-blue-500 text-xl font-bold p-4'>Credit Hour Remaining {creditHour} hr</h1>
                 </div>
                 <hr />
                 <div className='p-4'>
@@ -17,7 +17,7 @@ const Sidebar = ({ courseName, coursePrice }) => {
                 </div>
                 <hr />
                 <div>
-                    <h1 className='text-black text-xl font-regular p-4'>Total Credit Hour: 10</h1>
+                    <h1 className='text-black text-xl font-regular p-4'>Total Credit Hour: {TotalCredit}</h1>
                 </div>
                 <hr />
                 <div>
