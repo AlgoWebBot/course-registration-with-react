@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Course from '../Course/Course';
 
-const Courses = () => {
+const Courses = ({ handleCourseName }) => {
 
     const [courses, setCourses] = useState([]);
 
@@ -15,7 +15,11 @@ const Courses = () => {
         <div className='flex justify-center items-center'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4'>
                 {
-                    courses.map(course => <Course key={course.id} course={course} />)
+                    courses.map(course => <Course
+                        key={course.id}
+                        course={course}
+                        handleCourseName={handleCourseName}
+                    />)
                 }
             </div>
         </div>
