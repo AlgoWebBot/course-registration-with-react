@@ -3,6 +3,7 @@ import './App.css'
 import Courses from './Components/Courses/Courses'
 import Header from './Components/Header/Header'
 import Sidebar from './Components/Sidebar/Sidebar'
+import Swal from 'sweetalert2'
 
 function App() {
 
@@ -15,13 +16,29 @@ function App() {
   const handleCourseName = (course) => {
     const notUnique = courseBookmark.find(uniqueCourse => uniqueCourse.id === course.id);
     if (notUnique) {
-      window.alert('Already exist in the book mark');
-    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Item already exist in bookmark!'
+      })
+    } else if (!notUnique && creditHour >= 3 && TotalCredit <= 18) {
       setCourseBookmarks([...courseBookmark, course])
       setCoursePrice(coursePrice + course.coursePrice);
       setcreditHour(creditHour - course.courseCredit)
       setTotalCredit(TotalCredit + course.courseCredit);
-      // console.log(coursePrice)
+    } else if (creditHour <= 3) {
+      setcreditHour(0);
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Credit hour must be greather then 0!'
+      })
+    } else if (TotalCredit >= 18) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Credit hour must be greather then 0!'
+      })
     }
   }
 
