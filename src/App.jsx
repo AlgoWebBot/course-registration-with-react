@@ -51,7 +51,7 @@ function App() {
 
   return (
     <>
-      <div className='container mx-auto'>
+      <div className='container mx-auto font-family'>
         <Header />
         <div className='lg:flex mg:justify-center'>
           <div className='md:w-3/4'>
@@ -59,11 +59,11 @@ function App() {
           </div>
           <div className='md:1/4 py-6'>
             <Sidebar
-              courseName={courseBookmark} 
+              courseName={courseBookmark}
               coursePrice={coursePrice}
               TotalCredit={TotalCredit}
               creditHour={creditHour}
-              />
+            />
           </div>
         </div>
       </div>

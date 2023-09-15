@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Course from '../Course/Course';
 
-const Courses = ({ handleCourseName }) => {
+const Courses = ({ handleCourseName, notify }) => {
 
     const [courses, setCourses] = useState([]);
 

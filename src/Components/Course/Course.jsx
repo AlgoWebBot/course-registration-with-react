@@ -8,7 +8,7 @@ const Course = ({ course, handleCourseName }) => {
 
   return (
     <div>
-      <div className="w-80 p-2 bg-base-100 shadow-xl space-y-2 rounded-lg">
+      <div className="w-80 p-3 bg-base-100 shadow-xl space-y-2 rounded-lg">
         <figure>
           <img src={image} alt="Shoes" className='w-full h-[200px] rounded-lg' />
         </figure>
@@ -28,7 +28,7 @@ const Course = ({ course, handleCourseName }) => {
           </div>
 
           <div className="mt-2">
-            <button onClick={ () => handleCourseName(course)} className="btn btn-primary w-full text-white mt-2">Select</button>
+            <button onClick={() => handleCourseName(course)} className="btn btn-primary w-full text-white mt-2">Select</button>
           </div>
         </div>
       </div>
