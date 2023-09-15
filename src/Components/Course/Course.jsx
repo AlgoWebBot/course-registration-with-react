@@ -28,7 +28,7 @@ const Course = ({ course, handleCourseName }) => {
           </div>
 
           <div className="mt-2">
-            <button onClick={() => handleCourseName(course)} className="btn btn-primary w-full text-white mt-2">Select</button>
+            <button onClick={() => handleCourseName(course)} className="btn btn-primary w-full text-white mt-2 capitalize font-regular">Select</button>
           </div>
         </div>
       </div>
