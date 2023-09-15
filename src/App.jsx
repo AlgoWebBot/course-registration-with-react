@@ -16,7 +16,6 @@ function App() {
   const handleCourseName = (course) => {
     const notUnique = courseBookmark.find(uniqueCourse => uniqueCourse.id === course.id);
     let initialCredit = course.courseCredit;
-    // console.log(creditHour, TotalCredit);
     if (notUnique) {
       Swal.fire({
         icon: 'error',
@@ -25,7 +24,7 @@ function App() {
       })
     } else {
       const totalCredit = initialCredit + TotalCredit;
-      const RemainingCreditHour = creditHour - initialCredit;
+      // const RemainingCreditHour = creditHour - initialCredit;
       if (totalCredit > 20) {
         Swal.fire({
           icon: 'error',
@@ -38,14 +37,6 @@ function App() {
         setcreditHour(creditHour - course.courseCredit)
         setTotalCredit(TotalCredit + course.courseCredit);
       }
-    }
-    if (RemainingCreditHour < 0) {
-      return Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Credit hour can not negative!'
-      })
-      // return console.log('negative');
     }
   }
 
