@@ -14,7 +14,7 @@ function App() {
   const [TotalCredit, setTotalCredit] = useState(0);
 
   const notify = (msg) => toast.warn(msg, {
-    position: "top-center",
+    position: "top-right",
     autoClose: 1000,
     transition: Zoom,
     theme: "light",
