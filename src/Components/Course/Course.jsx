@@ -19,7 +19,7 @@ const Course = ({ course, handleCourseName }) => {
           <div className='flex justify-between items-center'>
             <div className='flex items-center justify-center gap-2'>
               <FiDollarSign className='text-2xl' />
-              <p className='text-xl text-[#1c1b1b99]'>Price: {coursePrice ? coursePrice : "Upcoming soon!!!"}$</p>
+              <p className='text-xl text-[#1c1b1b99]'>Price: {coursePrice ? coursePrice : "Upcoming soon!!!"}</p>
             </div>
             <div className='flex justify-center items-center gap-2'>
               <BsBook className='text-xl text-black' />
