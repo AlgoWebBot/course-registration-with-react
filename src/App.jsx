@@ -3,7 +3,8 @@ import './App.css'
 import Courses from './Components/Courses/Courses'
 import Header from './Components/Header/Header'
 import Sidebar from './Components/Sidebar/Sidebar'
-import Swal from 'sweetalert2'
+import { ToastContainer, Zoom, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -12,25 +13,22 @@ function App() {
   const [creditHour, setcreditHour] = useState(20);
   const [TotalCredit, setTotalCredit] = useState(0);
 
+  const notify = (msg) => toast.warn(msg, {
+    position: "top-center",
+    autoClose: 1000,
+    transition: Zoom,
+    theme: "light",
+  });
 
   const handleCourseName = (course) => {
     const notUnique = courseBookmark.find(uniqueCourse => uniqueCourse.id === course.id);
     let initialCredit = course.courseCredit;
     if (notUnique) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Item already exist in bookmark!'
-      })
+      notify("Card already exist in queue!");
     } else {
       const totalCredit = initialCredit + TotalCredit;
-      // const RemainingCreditHour = creditHour - initialCredit;
       if (totalCredit > 20) {
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Total credit limit exist!'
-        })
+        notify("Course credit limit exceed!");
       } else {
         setCourseBookmarks([...courseBookmark, course])
         setCoursePrice(coursePrice + course.coursePrice);
@@ -57,6 +55,10 @@ function App() {
             />
           </div>
         </div>
+      </div>
+      <div>
+        {/* <button onClick={}>Notify!</button> */}
+        <ToastContainer />
       </div>
     </>
   )

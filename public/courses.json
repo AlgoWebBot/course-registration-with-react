@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image": "https://i.ibb.co/qCxDzbg/Rectangle-2.png",
+    "image": "https://i.ibb.co/ccKLD6m/Rectangle-2-2.png",
     "courseName": "Introduction to Programming",
     "courseCredit": 3,
     "courseDetails": "Learn the fundamentals of programming with a focus on problem-solving and algorithm development.",
@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "image": "https://i.ibb.co/ccKLD6m/Rectangle-2-2.png",
+    "image": "https://i.ibb.co/C7KDdPn/Rectangle-3.png",
     "courseName": "Data Structures",
     "courseCredit": 4,
     "courseDetails": "Explore advanced data structures and algorithms used in computer science and software development.",
@@ -49,7 +49,7 @@
   },
   {
     "id": 7,
-    "image": "https://i.ibb.co/C7KDdPn/Rectangle-3.png",
+    "image": "https://i.ibb.co/qCxDzbg/Rectangle-2.png ",
     "courseName": "Software Engineering",
     "courseCredit": 3,
     "courseDetails": "Learn software development methodologies, project management, and quality assurance.",
