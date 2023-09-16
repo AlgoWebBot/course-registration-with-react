@@ -40,7 +40,7 @@ function App() {
 
   return (
     <>
-      <div className='container mx-auto font-family'>
+      <div className='container mx-auto font-family pb-10'>
         <Header />
         <div className='lg:flex mg:justify-center'>
           <div className='md:w-3/4'>

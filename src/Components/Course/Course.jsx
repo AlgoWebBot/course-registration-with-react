@@ -1,6 +1,6 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDollarSign, faBookOpen } from '@fortawesome/free-solid-svg-icons'
+import { BsBook } from 'react-icons/bs';
+import { FiDollarSign } from 'react-icons/fi';
 
 const Course = ({ course, handleCourseName }) => {
 
@@ -18,11 +18,11 @@ const Course = ({ course, handleCourseName }) => {
           
           <div className='flex justify-between items-center'>
             <div className='flex items-center justify-center gap-2'>
-              <FontAwesomeIcon icon={faDollarSign} />
+              <FiDollarSign className='text-2xl' />
               <p className='text-xl text-[#1c1b1b99]'>Price: {coursePrice ? coursePrice : "Upcoming soon!!!"}$</p>
             </div>
             <div className='flex justify-center items-center gap-2'>
-              <FontAwesomeIcon icon={faBookOpen} />
+              <BsBook className='text-xl text-black' />
               <p className='text-xl text-[#1c1b1b99]'>Credit: {courseCredit ? courseCredit : "Upcoming soon!!!"}hr</p>
             </div>
           </div>
