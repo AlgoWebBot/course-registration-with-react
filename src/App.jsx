@@ -46,7 +46,7 @@ function App() {
           <div className='md:w-3/4'>
             <Courses handleCourseName={handleCourseName} />
           </div>
-          <div className='md:1/4 py-6'>
+          <div className='md:1/4 py-4'>
             <Sidebar
               courseName={courseBookmark}
               coursePrice={coursePrice}
