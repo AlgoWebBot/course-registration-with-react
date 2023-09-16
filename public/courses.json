@@ -18,7 +18,7 @@
   {
     "id": 3,
     "image": "https://i.ibb.co/RBswD5N/Rectangle-2-3.png",
-    "courseName": "Web Development with React",
+    "courseName": "Introduction to Algorithms",
     "courseCredit": 3,
     "courseDetails": "Build interactive and responsive web applications using React.js.",
     "coursePrice": 349
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "image": "https://i.ibb.co/G5Qbj46/Rectangle-2-4.png",
-    "courseName": "Database Management",
+    "courseName": "Introduction to C++ for DSA",
     "courseCredit": 4,
     "courseDetails": "Learn about database design, SQL, and database administration.",
     "coursePrice": 429
@@ -50,7 +50,7 @@
   {
     "id": 7,
     "image": "https://i.ibb.co/qCxDzbg/Rectangle-2.png ",
-    "courseName": "Software Engineering",
+    "courseName": "Basic OOP Full Course",
     "courseCredit": 3,
     "courseDetails": "Learn software development methodologies, project management, and quality assurance.",
     "coursePrice": 349
